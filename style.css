@@ -119,9 +119,126 @@ h4 {
   flex-direction: column;
   grid-area: 1em;
 }
+.main-links a:hover {
+  color: var(--secondry-color);
+}
+.second-links a:hover {
+  color: var(--light-text-color);
+}
+.icon-small,
+.icon-large {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25em;
+  font-weight: normal;
+}
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
+.icon-large {
+  font-size: 1.7em;
+  padding: 0 0.75em 0 0;
+}
 
+/*  */
+/*========================== HEADER ==========================*/
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+  transition: var(--trans-color);
+}
+
+/* --------------------- HEADER-TOP ---------------------*/
+.header-top .wrapper {
+  justify-content: space-between;
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  line-height: 42px;
+}
+.wrapper ul {
+  gap: 2em;
+}
+.wrapper ul li {
+  position: relative;
+}
+.wrapper ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2em;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  display: none;
+}
+.wrapper .right ul ul li a {
+  padding: 0.25em 1em;
+}
+.wrapper .right ul ul .current a {
+  background-color: var(--border-color);
+}
+.wrapper ul li:hover ul {
+  display: block;
+}
+/* --------------------- HEADER-NAV ---------------------*/
+.header-nav .trigger {
+  font-size: 1.5em;
+  display: flex;
+  padding: 0.25em;
+  display: none;
+  margin: right 0.5em;
+}
+.header-nav .left {
+  display: flex;
+  gap: 4em;
+  align-items: center;
+}
+.left .logo a {
+  font-weight: var(--fw8);
+  font-size: 1.75em;
+  position: relative;
+}
+.left li {
+  position: relative;
+}
+.left li a {
+  display: flex;
+  align-items: center;
+}
+.left li a .fly-item span {
+  position: absolute;
+  right: -2.5em;
+  top: -1.4em;
+  background-color: var(--primary-color);
+  padding: 0.1em 0.2em;
+  color: var(--white-color);
+  font-size: var(--font-smaller);
+  border-radius: 3px;
+}
+/*  */
+
+/*  */
+/*  */
+
+/*  */
+
+/*  */
+/*  */
+
+/*  */
+
+/*  */
+/*  */
+
+/*  */
+
+/*  */
 @media screen and (min-width: 992px) {
   .container {
     padding: 0 2em;
+  }
+  .desktop-hide {
+    display: none;
   }
 }
