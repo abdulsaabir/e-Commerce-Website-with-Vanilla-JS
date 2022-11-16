@@ -186,35 +186,58 @@ header li > a {
   font-size: 1.5em;
   display: flex;
   padding: 0.25em;
-  display: none;
   margin: right 0.5em;
 }
-.header-nav .left {
-  display: flex;
-  gap: 4em;
-  align-items: center;
-}
 .left .logo a {
+  font-family: "Poppins";
   font-weight: var(--fw8);
   font-size: 1.75em;
   position: relative;
-}
-.left li {
-  position: relative;
-}
-.left li a {
   display: flex;
-  align-items: center;
+  padding-left: 0.75em;
+  margin-right: 2em;
 }
-.left li a .fly-item span {
+.circle {
   position: absolute;
-  right: -2.5em;
-  top: -1.4em;
-  background-color: var(--primary-color);
-  padding: 0.1em 0.2em;
+  top: -15px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  background-color: var(--light-bg-color);
+  z-index: -1;
+  border-radius: var(--percantage-half);
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--percantage-half);
+  background-color: var(--secondry-color);
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.4;
+}
+.header-nav nav > ul {
+  line-height: 100px;
+  gap: 2em;
+}
+.fly-item {
+  position: absolute;
+  height: 16px;
+  font-weight: var(--font-smaller);
+  padding: 3px;
+  text-align: center;
+  line-height: 10px;
   color: var(--white-color);
-  font-size: var(--font-smaller);
+}
+nav .fly-item {
+  top: 50%;
+  margin-top: -24px;
+  width: 30px;
   border-radius: 3px;
+  background-color: var(--primary-color);
+  right: -32px;
 }
 /*  */
 
@@ -238,7 +261,7 @@ header li > a {
   .container {
     padding: 0 2em;
   }
-  .desktop-hide {
+  .header-nav .desktop-hide {
     display: none;
   }
 }
